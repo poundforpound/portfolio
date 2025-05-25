@@ -1,31 +1,28 @@
 import React from 'react';
-import styled from "styled-components";
-import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
+import {FlexWrapper} from "../../../components/FlexWrapper.ts";
 import {SectionTitle} from "../../../components/SectionTitle.ts";
 import {Skill} from "./skill/Skill.tsx";
 import {skillsInfo} from "../../../assets/data/data.tsx";
 import {Container} from "../../../components/Container.ts";
+import { S } from './Skills_Styles.ts';
 
-export const Skills = () => {
-
+export const Skills: React.FC = () => {
     return (
-        <StyledSkill>
+        <S.Skills>
             <Container>
                 <SectionTitle>My Skills</SectionTitle>
-                <FlexWrapper wrap={"wrap"} justify={"space-around"}>
+                <FlexWrapper wrap={"wrap"} justify={"space-between"}>
                     {skillsInfo.map((skill, i) => (
                         <Skill key={`${i}_${skill.img}`} img={skill.img} title={skill.title}
                                description={skill.description}/>
                     ))}
                 </FlexWrapper>
             </Container>
-        </StyledSkill>
+        </S.Skills>
     );
 };
 
-const StyledSkill = styled.section`
-   
-`
+
 
 
 

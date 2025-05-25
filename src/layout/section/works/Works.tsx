@@ -1,15 +1,15 @@
 import React from 'react';
-import styled from "styled-components";
 import {SectionTitle} from "../../../components/SectionTitle.ts";
 import {TabMenu} from "./tabmenu/TabMenu.tsx";
 import {menuWorks, worksInfo} from "../../../assets/data/data.tsx";
-import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
-import {Work} from "./work/work.tsx";
+import {FlexWrapper} from "../../../components/FlexWrapper.ts";
+import {Work} from "./work/Work.tsx";
 import {Container} from "../../../components/Container.ts";
+import { S } from './Works_Styles.ts';
 
-export const Works = () => {
+export const Works:React.FC = () => {
     return (
-        <StyledWorks>
+        <S.Works>
             <Container>
                 <SectionTitle>My works</SectionTitle>
                 <TabMenu items={menuWorks}/>
@@ -19,10 +19,7 @@ export const Works = () => {
                     ))}
                 </FlexWrapper>
             </Container>
-        </StyledWorks>
+        </S.Works>
     );
 };
 
-const StyledWorks = styled.section`
-
-`
