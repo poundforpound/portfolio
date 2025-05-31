@@ -7,7 +7,7 @@ import {Container} from "../../../components/Container.ts";
 
 export const Slogan:React.FC = () => {
     return (
-        <StyledSlogan>
+        <StyledSlogan id={"slogan"}>
             <Container>
                 <FlexWrapper direction={"column"} align={"center"}>
                     <SectionTitle>I Am Available For Freelance</SectionTitle>

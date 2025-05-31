@@ -51,6 +51,9 @@ const Photo = styled.img`
 
 const MainTitle = styled.h1`
     ${font({ weight:400, Fmin:20,Fmax:27})} 
+    p{
+        display:none;
+    }
 `
 const Name = styled.h2`
     ${font({family:"'Josefin Sans',sans-serif", weight:700, Fmin:36,Fmax:50})}

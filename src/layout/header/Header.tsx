@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from 'react';
 import {Logo} from "../../components/logo/Logo.tsx";
-import {menuHeader} from "../../assets/data/data.tsx";
 import {Container} from "../../components/Container.ts";
 import {FlexWrapper} from "../../components/FlexWrapper.ts";
 import {DesktopMenu} from "./headerMenu/desktopMenu/desktopMenu.tsx";
@@ -20,13 +19,13 @@ export const Header: React.FC = () => {
     },[]);
 
     return (
-        <S.Header>
+        <S.Header id={"header"}>
             <Container>
                 <FlexWrapper justify={"space-between"} align={"center"}>
                     <Logo/>
                     {width < breakpoint
-                        ?<MobileMenu items={menuHeader}/>
-                        :<DesktopMenu items={menuHeader}/>}
+                        ?<MobileMenu />
+                        :<DesktopMenu />}
                 </FlexWrapper>
             </Container>
         </S.Header>

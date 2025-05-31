@@ -3,6 +3,7 @@ import {theme} from "../../styles/Theme.ts";
 import {font} from "../../styles/Common.ts";
 
 const Footer = styled.footer`
+    position: relative;
     background: ${theme.colors.primaryBg};
     padding: 40px 0;
 `
@@ -19,7 +20,9 @@ const SocialList = styled.ul`
     margin: 30px 0;
 `
 
-const SocialItem = styled.li``
+const SocialItem = styled.li`
+
+`
 
 const SocialLink = styled.a`
     background-color: rgba(255,255,255,0.1);
@@ -30,8 +33,10 @@ const SocialLink = styled.a`
     display: flex;
     justify-content: center;
     align-items: center;
-    
     color:${theme.colors.accent};
+    
+    transition: ${theme.animations.transition};
+    
     &:hover{
         color:${theme.colors.primaryBg};
         transform: translateY(-4px);

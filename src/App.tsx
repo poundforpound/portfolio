@@ -7,23 +7,28 @@ import {Testimony} from "./layout/section/testimony/Testimony.tsx";
 import {Contact} from "./layout/section/contact/Contact.tsx";
 import {Slogan} from "./layout/section/slogan/Slogan.tsx";
 import {Footer} from "./layout/footer/Footer.tsx";
+import {Particle} from "./components/particle/Particle.tsx";
+import {GoTopBtn} from "./components/goTopBtn/GoTopBtn.tsx";
 
 
 function App() {
     return (
-        <div className="App">
+        <div className="App" >
+            <Particle />
+                <Header />
+                <Main />
+                <Skills/>
+                <Works/>
+                <Testimony/>
+                <Contact/>
+                <Slogan/>
+                <Footer/>
+            <GoTopBtn/>
+            </div>
 
-            <Header/>
-            <Main/>
-            <Skills/>
-            <Works/>
-            <Testimony/>
-            <Contact/>
-            <Slogan/>
-            <Footer/>
-        </div>
-    )
+    );
 }
+
 
 export default App
 

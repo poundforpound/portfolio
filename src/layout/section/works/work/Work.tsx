@@ -19,7 +19,7 @@ export const Work:React.FC<workType> = (props: workType) => {
             <S.Info>
                 <S.WorkTitle>{props.title}</S.WorkTitle>
                 <S.WorkDescription>{props.description}</S.WorkDescription>
-                <Link href={"#"}>Demo</Link>
+                <Link active href={"#"}>Demo</Link>
                 <Link href={"#"}>Code</Link>
             </S.Info>
         </S.Work>

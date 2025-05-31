@@ -11,6 +11,13 @@ type worksInfoType={
     img: string,
     title: string,
     description: string,
+    type?:string,
+    id?:number,
+}
+
+type tabItemsType = {
+    title: string,
+    status:"all" | "landing" | "react" | "spa"
 }
 
 type arrayIncludeStringType=string[]
@@ -48,15 +55,69 @@ export const worksInfo:worksInfoType[]=[
         img:proj1,
         title:'Social Network',
         description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+        type:"spa",
+        id:1,
     }, {
         img:proj2,
         title:'Timer',
         description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+        type:'react',
+        id:2,
+    }, {
+        img:proj2,
+        title:'Timer',
+        description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+        type:'react',
+        id:3,
+    },{
+        img:proj2,
+        title:'Timer',
+        description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+        type:'react',
+        id:4,
     }
 ]
 
-export const menuHeader:arrayIncludeStringType=["Home","Skills","Works hover","Testimony","Contact"]
-
-export const menuWorks:arrayIncludeStringType=["ALL","LANDING PAGE","REACT","SPA"]
+export const menuHeader:Array<{title:string,href:string}>=[
+    {
+        title:"Home",
+        href:"home"
+    },
+    {
+        title:"Skills",
+        href:"skills"
+    },
+    {
+        title:"Works",
+        href:"works"
+    },
+    {
+        title:"Testimony",
+        href:"testimony"
+    },
+    {
+        title:"Contact",
+        href: "contact"
+    }
+]
 
 export const socialList:arrayIncludeStringType=["instagram","telegram","vk","linkedin"]
+
+export const tabsItems:tabItemsType[]=[
+    {
+        title:"ALL",
+        status:"all"
+    },
+    {
+        title:"landing page",
+        status:"landing"
+    },
+    {
+        title:"react",
+        status:"react"
+    },
+    {
+        title:"spa",
+        status:"spa"
+    }
+]

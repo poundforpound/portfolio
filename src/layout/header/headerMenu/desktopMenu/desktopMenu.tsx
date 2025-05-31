@@ -4,10 +4,10 @@ import {S} from  "../HeaderMenu_Styles.ts"
 
 
 
-export const DesktopMenu: React.FC<{ items: Array<string> }> = (props: { items: Array<string> }) => {
+export const DesktopMenu: React.FC = () => {
     return (
         <S.DesktopMenu>
-            <Menu items={props.items}/>
+            <Menu />
         </S.DesktopMenu>
     );
 };
